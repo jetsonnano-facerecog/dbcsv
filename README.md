@@ -83,6 +83,7 @@ sudo nano face.py
 Set var USING_RPI_CAMERA_MODULE On Line 18 True or False : 
 ```python
 USING_RPI_CAMERA_MODULE=True #Raspberry Pi 2.x camera module
+or
 USING_RPI_CAMERA_MODULE=False #USB webcam or other USB video input (like an HDMI capture device)
 ```
 ## Start face.py
