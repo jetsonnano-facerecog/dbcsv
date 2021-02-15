@@ -69,9 +69,29 @@ sudo pip3 install face_recognition
 ```
 Now your Jetson Nano is ready to do face recognition with full CUDA GPU acceleration.
 
-## Clone this repo
+## Clone this repo to run it
+
 ```bash
 git clone https://github.com/jetsonnano-facerecog/dbcsv.git 
 cd ~/dbcsv
+```
+## Set this depending on your camera type:
+Nano face.py file 
+```bash
+sudo nano face.py
+```
+Set var USING_RPI_CAMERA_MODULE On Line 18 True or False : 
+```python
+USING_RPI_CAMERA_MODULE=True #Raspberry Pi 2.x camera module
+USING_RPI_CAMERA_MODULE=False #USB webcam or other USB video input (like an HDMI capture device)
+```
+## Start face.py
+```bash
+sudo nano face.py
 python3 face.py
 ```
+face.py will generate 2 csv files , 1 know_face.dat and idX.jpg images :
+* visitor.csv 
+* visit.csv
+* know_face.dat
+
