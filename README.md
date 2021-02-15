@@ -15,8 +15,8 @@ Medium article https://medium.com/@ageitgey/build-a-face-recognition-system-for-
 
 ## Installing on an Nvidia Jetson Nano board
 
- * [Jetson Nano installation instructions](https://medium.com/@ageitgey/build-a-hardware-based-face-recognition-system-for-150-with-the-nvidia-jetson-nano-and-python-a25cb8c891fd)
-   * Please follow the instructions in the article carefully. There is current a bug in the CUDA libraries on the Jetson Nano that will cause this library to fail silently if you don't follow the instructions in the article to comment out a line in dlib and recompile it.
+ * Please follow the instructions in the article [Jetson Nano installation instructions](https://medium.com/@ageitgey/build-a-hardware-based-face-recognition-system-for-150-with-the-nvidia-jetson-nano-and-python-a25cb8c891fd)
+ * or follow instruction below
 
 ### Installing Required Python Libraries
 To build our face recognition system, we need to install several Python libraries. While the Jetson Nano has a lot of great stuff pre-installed, there are some odd omissions. For example, OpenCV is installed with Python bindings, but pip and numpy aren’t installed and those are required to do anything with OpenCV. Let’s fix that.
@@ -28,7 +28,7 @@ sudo apt-get install python3-pip cmake libopenblas-dev liblapack-dev libjpeg-dev
 ```
 First, we are updating apt, which is the standard Linux software installation tool that we’ll use to install everything else. Next, we are installing some basic libraries with apt that we will need later to compile numpy and dlib.
 
-### Jetson Nano 2GB
+### Swapfile esp : Jetson Nano 2GB
 Before we go any further, we need to create a swapfile. The Jetson Nano only has 4GB of RAM which won’t be enough to compile dlib. To work around this, we’ll set up a swapfile which lets us use disk space as extra RAM. Luckily, there is an easy way to set up a swapfile on the Jetson Nano. Just run these two commands:
 ```bash
 git clone https://github.com/JetsonHacksNano/installSwapfile
