@@ -139,7 +139,7 @@ def main_loop():
     else:
         # Accessing the camera with OpenCV on a laptop just requires passing in the number of the webcam (usually 0)
         # Note: You can pass in a filename instead if you want to process a video file instead of a live camera stream
-        video_capture = cv2.VideoCapture("ayah2.mp4")
+        video_capture = cv2.VideoCapture(0)
 
     # Track how long since we last saved a copy of our known faces to disk as a backup.
     number_of_faces_since_save = 0
